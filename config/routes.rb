@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: %i[show] do
+  resources :users, only: %i[show new create edit update] do
     member do
       get '(:liked)', to: 'users#show', as: :show
     end
